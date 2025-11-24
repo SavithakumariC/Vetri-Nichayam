@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import "./Dice.css"
+import "./Dice.css"
 
 function Dice() {
     // const dice = [dice1, dice2, dice3, dice4, dice5, dice6]
@@ -23,11 +23,11 @@ function Dice() {
     <div className="container">
       <div>
         <p>Player 1</p>
-        <img src={`dice${player1}.png`} id="dice1" />
+        <img src={`./images/dice${player1}.png`} id="dice1" />
       </div>
       <div>
         <p>Player 2</p>
-        <img src={`dice${player2}.png`} id="dice2" />
+        <img src={`./images/dice${player2}.png`} id="dice2" />
       </div>
     </div>
     <button id="rollButton" onClick={generateRandomNum}>Roll Dice</button>
