@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task</title>
+    <link rel="stylesheet" href="dice.css" />
+  </head>
+  <body>
+    <h1 id="result">Let's play</h1>
+    <div class="container">
+      <div>
+        <p>Player 1</p>
+        <img src="../images/dice1.png" id="dice1" />
+      </div>
+      <div>
+        <p>Player 2</p>
+        <img src="../images/dice1.png" id="dice2" />
+      </div>
+    </div>
+    <button id="rollButton">Roll Dice</button>
+    <script>
+      const rollBtn = document.getElementById("rollButton");
+      const dice1 = document.getElementById("dice1");
+      const dice2 = document.getElementById("dice2");
+      const result = document.getElementById("result");
+      rollBtn.addEventListener("click", function () {
+        const randomNum1 = Math.floor(Math.random() * 6) + 1;
+        const randomNum2 = Math.floor(Math.random() * 6) + 1;
+        dice1.src = `../images/dice${randomNum1}.png`;
+        dice2.src = `../images/dice${randomNum2}.png`;
+        if (randomNum1 > randomNum2) {
+          result.innerText = "🚩 Player 1 Wins😎";
+        } else if (randomNum1 < randomNum2) {
+          result.innerText = "Player 2 🚩 Wins🤩";
+        } else {
+          result.innerText = "Match Draw 🤷‍♂️";
+        }
+      });
+    </script>
+  </body>
+</html>

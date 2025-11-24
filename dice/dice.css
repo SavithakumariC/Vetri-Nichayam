@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    color: white;
+    font-size: 20px;
+}
+#result{
+    color: aqua;
+    text-align: center;
+    margin: 60px;
+}
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+#rollButton{
+    background-color: aqua;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    width: 160px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
